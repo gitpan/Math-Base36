@@ -1,6 +1,7 @@
 Revision history for Perl extension Math::Base36.
 
-0.01  Mon Feb  4 16:46:02 2002
-	- base36_encode and base36_decode work, and can be exported
+0.01  Mon Feb  4 2002
+	- base36_encode and base36_decode work, and can be exported.
 
-
+0.02  Sun Feb 17 2002
+	- Fixed a dependency error.

@@ -1,6 +1,7 @@
 package Math::Base36;
 
 require 5.005_62;
+
 use strict;
 use warnings;
 use Carp;
@@ -10,28 +11,18 @@ use AutoLoader qw(AUTOLOAD);
 
 our @ISA = qw(Exporter);
 
-# Items to export into callers namespace by default. Note: do not export
-# names by default without a very good reason. Use EXPORT_OK instead.
-# Do not simply export all your public functions/methods/constants.
-
-# This allows declaration	use Math::Base36 ':all';
-# If you do not need this, moving things directly into @EXPORT or @EXPORT_OK
-# will save memory.
-
-our %EXPORT_TAGS = ( 'all' => [ qw(
-	encode_base36 decode_base36
-) ] );
+our %EXPORT_TAGS = ( 'all' => [ qw(encode_base36 decode_base36) ] );
 
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
-our @EXPORT = qw(
+our @EXPORT = qw( );
 
-);
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 my $_digits = '0123456789ABCDEFGHIJKLMNOPQRSTUVWZYX';
 
 sub decode_base36 {
+	require Math::BigInt;
 	use Math::BigInt qw(:constant);
 	my ($t, $i)  = 0;
 	foreach(split //, reverse uc shift) {
