@@ -10,11 +10,11 @@ use Math::BigInt qw(:constant);
 our %EXPORT_TAGS = ( 'all' => [ qw(encode_base36 decode_base36) ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{ 'all' } } );
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 sub decode_base36 {
     my $base36 = uc( shift );
-    die 'Invalid base36 number' unless $base36 =~ m{[0-9A-Z]+};
+    die 'Invalid base36 number' if $base36 =~ m{[^0-9A-Z]};
 
     my ( $result, $digit ) = ( 0, 0 );
     for my $char ( split( //, reverse $base36 ) ) {
@@ -89,7 +89,7 @@ Brian Cassidy E<lt>bricas@cpan.orgE<gt>
 
 Copyright 2002 by Rune Henssel
 
-Copyright 2007 by Brian Cassidy
+Copyright 2007-2009 by Brian Cassidy
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
