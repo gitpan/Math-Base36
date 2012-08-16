@@ -6,10 +6,9 @@ build_requires:
   ExtUtils::MakeMaker: 6.59
   Test::More: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.59
-distribution_type: module
-dynamic_config: 1
-generated_by: 'Module::Install version 1.06'
+  ExtUtils::MakeMaker: 0
+dynamic_config: 0
+generated_by: 'ExtUtils::MakeMaker version 6.6302, CPAN::Meta::Converter version 2.120630'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -17,12 +16,9 @@ meta-spec:
 name: Math-Base36
 no_index:
   directory:
-    - inc
     - t
+    - inc
 requires:
   Math::BigInt: 1.60
-  perl: 5.6.0
-resources:
-  license: http://dev.perl.org/licenses/
-  repository: http://github.com/bricas/math-base36
+  perl: 5.006
 version: 0.10

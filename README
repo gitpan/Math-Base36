@@ -4,8 +4,8 @@ NAME
 SYNOPSIS
       use Math::Base36 ':all';
 
-      $b36 = encode_base36( $number );
-      $number = decode_base36( $b36, $padlength );
+      $b36 = encode_base36( $number, $padlength );
+      $number = decode_base36( $b36 );
 
 DESCRIPTION
     This module converts to and from Base36 numbers (0..9 - A..Z)
@@ -30,7 +30,7 @@ MAINTAINER
 COPYRIGHT AND LICENSE
     Copyright 2002 by Rune Henssel
 
-    Copyright 2007-2010 by Brian Cassidy
+    Copyright 2007-2012 by Brian Cassidy
 
     This library is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.
