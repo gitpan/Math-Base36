@@ -4,6 +4,7 @@ author:
   - 'Rune Henssel <perl@henssel.dk>'
 build_requires:
   ExtUtils::MakeMaker: 6.59
+  Test::Exception: 0
   Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.59
@@ -25,4 +26,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: http://github.com/bricas/math-base36
-version: 0.11
+version: 0.12

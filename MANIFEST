@@ -14,5 +14,6 @@ META.yml
 README
 t/01-use.t
 t/02-basic.t
+t/03-invalid.t
 t/98-pod_coverage.t
 t/99-pod.t
